@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLLEGE ADVICER </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <h1>Professional College Advisory System</h1>
+    <button onclick="tabChanger('profileManagement')" class="threeTop profile">profile Management</button>
+    <button onclick="tabChanger('Analysis-insights')"class="threeTop analysis">Analysis & Insights</button>
+    <button onclick="tabChanger('professionalConsultation')"class="threeTop professional">Professional Consultation</button>
+    <div class="linespecial"></div>
+    <div id="tab1">
+      <p>Student Profile</p>
+      <h3>Academic Performance</h3>
+      <div class="line"></div>
+      <div class="marks">
+        <div>
+          <label><h5>Class X Marks(%)</h5></label>
+          <input type="number" placeholder="Enter your 10th Mark" class="markInput Mark10">
+        </div>
+        <div>
+          <label><h5>Class XI Marks(%)</h5></label>
+        <input type="number"placeholder="Enter your 11th Mark" class="markInput Mark11">
+        </div>
+        <div>
+        <label><h5>Class XII Marks(%)</h5></label>
+        <input type="number" placeholder="Enter Your 12th Mark" class="markInput Mark12">
+        </div>
+      </div>
+        <h3>Preferences & Requirements</h3>
+        <div class="line"></div>
+        <div class="pre">
+         <div>
+          <label>Budget Range(per annum)</label>
+          <select id="Budget">
+            <option value="Below ₹1 Lakh">Below ₹1 Lakh</option>
+            <option value="Below ₹1-2 Lakhs">Below ₹1-2 Lakhs</option>
+            <option value="Below ₹2-5 Lakhs">Below ₹2-5 Lakhs</option>
+            <option value="Above ₹5 Lakhs">Above ₹5 Lakhs</option>
+          </select>
+         </div>
+          <div>
+            <label>Institution Type</label>
+          <select id="education">
+            <option value="Co-education">Co-education</option>
+            <option value="Boys Only">Boys Only</option>
+            <option value="Girls Only">Girls Only</option>
+          </select>
+          </div>
+          <div>
+            <label>Preferred Locations</label>
+          <input type="text" class="Locat" placeholder="Enter Preferred Location">
+          </div>
+          <div>
+            <label>Target Course/Program</label>
+            <input type="text" class="Course" placeholder="Enter course you are Interested" >
+          </div>
+
+          <div>
+            <label>Target Institution (if any)</label>
+          <input type="text" class="Institution" placeholder="Enter Your Dream college">
+          </div>
+          
+        </div>
+        <div class="Successfully"></div>
+        <button class="saveProfile">Save Profile</button>
+    </div>
+    <div id="tab2">
+      <p>AI-Powered Insights</p>
+      <button class="Generateinsights" onclick="insight()">Generate Insights</button>
+      
+      <div class="AiContents output-box"></div>
+    </div>
+    <div id="tab3">
+      <p>Professional Consultation</p>
+      <div class="line"></div>
+      <div class="page3">
+      <div class="GeminiIdea">
+        <h3>Chat Consultation</h3>
+        <input type="text" placeholder="Type your Message..." class="AskGemini" >
+        <button class="ChatwithGemini"onclick="AsktoGemini()">Enter</button>
+        <div class="GeminiContent"></div>
+      </div>
+      <div class="BlandCall">
+        <h3>Voice Consultation</h3>
+        <input type="text" placeholder="Enter your Phone Number" class="PhoneNumber">
+        <button class="CallwithGemini" >Connect With Advisor Now</button>
+      </div> 
+    </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+     
